@@ -7,16 +7,16 @@
     </div>
 {% endmacro %}
 
-{% macro option(timeZone) %}
-    <option {% if (timezone == "{{timeZone}}") %}selected{% endif %} value="{{timeZone}}">{{timeZone}}</option>
+{% macro option(timeZone, selected) %}
+    <option {% if selected %}selected{% endif %} value="{{timeZone}}">{{timeZone}}</option>
 {% endmacro %}
 
-{% macro timeZone() %}
+{% macro timeZone(selectedZone) %}
     <div class="form-group inline-input">
         <label>Time Zone</label>
         <select class="form-control" name="timezone" required="required">
             {% for tz in timezones %}
-                {{ option(tz) }}
+                {{ option(tz, (tz == selectedZone)) }}
             {% endfor %}
         </select>
     </div>
