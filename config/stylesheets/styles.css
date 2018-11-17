@@ -14,3 +14,7 @@ body {
 svg {
     margin-right: 50px;
 }
+
+.btn-warning {
+    background-color: #ffce01;
+}
