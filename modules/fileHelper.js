@@ -19,7 +19,7 @@ const readFile = function (inFile) {
 // writes the response to the configuration menu with the javascript form and values of config object
 const writeHtml = (res, config) => {
     if (config.categories) config.categories = config.categories.join(',');
-    const form = nunjucks.render(path.normalize(path.join(__dirname, '../config/form.html')), config);
+    const form = nunjucks.render(path.normalize(path.join(__dirname, '../config/index.html')), config);
     res.writeHead(200, {
         'Content-Type': 'text/html',
         'Content-Length': form.length
