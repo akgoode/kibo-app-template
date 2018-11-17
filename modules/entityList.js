@@ -26,13 +26,14 @@ const entityListBody = config => {
 }
 
 const entityBody = config => {
-    return {
-        listName: ENTITYNAME,
-        tenant: config.tenant,
-        site: config.site,
-        starttime: config.starttime,
-        timezone: config.timezone,
-    }
+    const body = {
+        listName: ENTITYNAME
+    };
+    Object.keys(config).forEach(key => {
+        body[key] = config[key];
+    });
+    console.log(body);
+    return body;
 }
 
 
