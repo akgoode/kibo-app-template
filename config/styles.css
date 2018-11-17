@@ -1,0 +1,16 @@
+body {
+    font-family: 'Open Sans';
+}
+
+.app-title {
+    margin: inherit 25px;
+}
+
+.inline-input {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+svg {
+    margin-right: 50px;
+}
