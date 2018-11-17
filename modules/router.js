@@ -6,7 +6,7 @@ const path = require('path');
 
 // custom module dependencies
 const getJob = require('./cronJob');
-const { displayForm, displayConfirmation } = require('./fileHelper');
+const { render } = require('./render');
 const { getAndCreateOrUpdateEntity } = require('./entityList');
 
 // initializes job variable.  Will be used by config route to start and stop the job
@@ -16,7 +16,7 @@ let job;
 // of the app menu inside each sandbox in which it is installed.
 // Always a post request to the URL that you set inside the packages tab
 router.post('/', (req, res) => {
-    displayForm(res);
+    render(res, 'index');
 });
 
 // Route for configuration form submission
@@ -25,7 +25,7 @@ router.post('/', (req, res) => {
 // restarts the job with the latest start time
 router.post('/config', (req, res) => {
     if (job) job.stop();
-    displayConfirmation(res);
+    render(res, 'confirmation');
     const data = req.body;
     getAndCreateOrUpdateEntity(data)
         .then(() => {
