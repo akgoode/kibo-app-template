@@ -1,0 +1,24 @@
+{% block imports %}
+    {% import './input.html' as formInputs %}
+{% endblock %}
+
+{% block form %}
+<form class="config-form" action="config" method="POST">
+    {% block siteconfig %}
+        <div>
+            {{ formInputs.input("text", "Tenant Id", tenant, "tenant", "") }}
+            {{ formInputs.input("text", "Site Id", site, "site", "") }}
+        </div>
+    {% endblock %}
+    
+    {% block custominputs %}{% endblock %}
+    
+    {% block timeconfig %}
+        <div>
+            {{ formInputs.input("time", "Job Run Time", starttime, "starttime", "") }}
+            {{ formInputs.timeZone(timezone) }}
+        </div>
+    {% endblock %}
+    <button class="btn btn-warning btn-lg" id="submit-config" type="submit" value="Submit">Submit</button>
+</form>
+{% endblock %}
