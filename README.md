@@ -1,5 +1,6 @@
-![Kibo Logo](https://kibocommerce.com/wp-content/uploads/header-logo.svg)
-# Kibo eCommerce Application Template
+<img src="https://kibocommerce.com/wp-content/uploads/header-logo.svg" alt="Kibo Logo" width="100"/> 
+
+# eCommerce Application Template
 
 ### Prerequisites
 1. Mozu Dev Center account.
