@@ -30,6 +30,7 @@ When the configuration menu is submitted, a cron job will be created, which will
 7. In a separate terminal, run `ngrok http -host-header=localhost 8080` to create an endpoint to which you can link in Dev Center.  Depending on how you installed it, you may need to run this command from the directory ngrok was installed in.  This will generate a URL which will serve your configuration UI with HTTPS.
 8. From your application screen in Dev Center, under the packages tab, enter the HTTPS URL from ngrok in the box and hit save.
 9. Install your application in a sandbox.
+10. Navigate to `System > Applications` in the sandbox admin, open your application, and click the configuration button to configure the app and schedule the job.
 
 Note: This template uses ngrok because it's easy to set up and can serve HTTPS.  The downside to this is that every time you restart ngrok you will have to enter the new URL in your app in dev center for both your configuration and your event subscriptions, and then reinstall the application to make the changes take hold.
 
