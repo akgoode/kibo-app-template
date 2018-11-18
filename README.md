@@ -2,6 +2,12 @@
 
 # eCommerce Application Template
 
+This repository contains everything you need to get started developing an application for Kibo eCommerce.  The config folder holds all the templates, stylesheets, and javascript to configure and submit changes to your application, and a configuration object will be created in an [entity list](https://www.mozu.com/docs/api/platform/entitylists/entitylists.htm) in the tenant in which it is installed.
+
+By default, on submit, the configuration menu will create an entity with the tenant ID, the site ID, the time and timezone at which the job will start, and a custom field as an example for your own custom data.  The name of the entity list and the name and data type of the entity id can be configured in `modules/entityList.js`.  If you add any input fields to the configuration menu using the provided input macro, the entity list will automatically update with the data submitted in those fields.
+
+When the configuration menu is submitted, a cron job will be created, which will run once a day at the provided time.  By default, the cron job will console.log the configuration settings and "job running".  You can add your custom job logic into the cron job callback function in `modules/cronJob.js`.
+
 ### Prerequisites
 1. Mozu Dev Center account.
 2. Access to at least one developer account.
