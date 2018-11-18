@@ -1,4 +1,4 @@
-<img src="https://kibocommerce.com/wp-content/uploads/header-logo.svg" alt="Kibo Logo" width="100"/> 
+<img src="https://kibocommerce.com/wp-content/uploads/header-logo.svg" alt="Kibo Logo" width="200"/> 
 
 # eCommerce Application Template
 
