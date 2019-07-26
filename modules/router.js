@@ -19,6 +19,10 @@ router.post('/', (req, res) => {
     render(res, 'index');
 });
 
+router.get('/', (req, res) => {
+    render(res, 'index');
+});
+
 // Route for configuration form submission
 // stops existing job if there is one
 // creates or updates the settings entity
