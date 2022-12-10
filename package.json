@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "cron": "^1.7.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mozu-node-sdk": "^2.13.1",
     "nunjucks": "^3.2.0"
   },
